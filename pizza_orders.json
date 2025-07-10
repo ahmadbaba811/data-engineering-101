@@ -1,0 +1,10 @@
+[
+    {
+        "orderdatetime": "2025-07-05-15:36:59",
+        "pizza_type": "Vegetable",
+        "order_type": "slice",
+        "quantity": 2,
+        "total_price": 1.0,
+        "discount_applied": false
+    }
+]
