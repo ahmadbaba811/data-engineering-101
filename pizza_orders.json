@@ -6,5 +6,137 @@
         "quantity": 2,
         "total_price": 1.0,
         "discount_applied": false
+    },
+    {
+        "orderdatetime": "2025-07-11-00:16:23",
+        "pizza_type": "Cheese",
+        "order_type": "box",
+        "quantity": 20,
+        "total_price": 80.0,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:16:43",
+        "pizza_type": "Chocolate",
+        "order_type": "box",
+        "quantity": 4,
+        "total_price": 48.0,
+        "discount_applied": false
+    },
+    {
+        "orderdatetime": "2025-07-11-00:20:33",
+        "pizza_type": "Deluxe",
+        "order_type": "box",
+        "quantity": 5,
+        "total_price": 27.0,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:23:08",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 20,
+        "total_price": 54.4,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:24:42",
+        "pizza_type": "Pepperoni",
+        "order_type": "box",
+        "quantity": 23,
+        "total_price": 73.6,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:25:48",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 24,
+        "total_price": 65.28,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:27:26",
+        "pizza_type": "Chicken",
+        "order_type": "box",
+        "quantity": 30,
+        "total_price": 108.0,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:36:59",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 26,
+        "total_price": 70.72,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:38:00",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 25,
+        "total_price": 68.0,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:46:39",
+        "pizza_type": "Chicken",
+        "order_type": "box",
+        "quantity": 32,
+        "total_price": 115.2,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:48:29",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 27,
+        "total_price": 73.44,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:49:47",
+        "pizza_type": "Deluxe",
+        "order_type": "box",
+        "quantity": 40,
+        "total_price": 192.0,
+        "discount_applied": true
+    },
+    {
+        "orderdatetime": "2025-07-11-00:56:25",
+        "pizza_type": "Chicken",
+        "order_type": "box",
+        "quantity": 34,
+        "total_price": 122.4,
+        "discount_applied": true,
+        "customer_name": "Musa A."
+    },
+    {
+        "orderdatetime": "2025-07-11-01:03:58",
+        "pizza_type": "Chicken",
+        "order_type": "box",
+        "quantity": 30,
+        "total_price": 108.0,
+        "discount_applied": true,
+        "customer_name": "Ahji KB"
+    },
+    {
+        "orderdatetime": "2025-07-11-21:15:31",
+        "pizza_type": "Classic",
+        "order_type": "box",
+        "quantity": 12,
+        "total_price": 32.64,
+        "discount_applied": true,
+        "customer_name": "Musa K"
+    },
+    {
+        "orderdatetime": "2025-07-11-21:16:42",
+        "pizza_type": "Pepperoni",
+        "order_type": "box",
+        "quantity": 10,
+        "total_price": 32.0,
+        "discount_applied": true,
+        "customer_name": "Jamilu J"
     }
 ]
