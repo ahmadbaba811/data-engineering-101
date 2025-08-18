@@ -1,0 +1,1227 @@
+[
+    {
+        "property_id": "3621748109",
+        "href": "https://www.realtor.com/realestateandhomes-detail/316-Manchester-Rd_Camp-Hill_PA_17011_M36217-48109",
+        "description": {
+            "beds": 4,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 1279,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "316 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 259000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 264236,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 254800,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "316-Manchester-Rd_Camp-Hill_PA_17011_M36217-48109",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3622269832",
+        "href": "https://www.realtor.com/realestateandhomes-detail/318-Manchester-Rd_Camp-Hill_PA_17011_M36222-69832",
+        "description": {
+            "beds": 3,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 1033,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "318 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 264074,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 266100,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 215000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 149900,
+        "permalink": "318-Manchester-Rd_Camp-Hill_PA_17011_M36222-69832",
+        "status": "sold",
+        "listing_id": "609608289",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3674255822",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1301-Kingsley-Rd_Camp-Hill_PA_17011_M36742-55822",
+        "description": {
+            "beds": 3,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 1033,
+            "lot_sqft": 6534,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1301 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 250000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 288898,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 247000,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 225000,
+        "permalink": "1301-Kingsley-Rd_Camp-Hill_PA_17011_M36742-55822",
+        "status": "sold",
+        "listing_id": "2948665062",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3620406535",
+        "href": "https://www.realtor.com/realestateandhomes-detail/312-Manchester-Rd_Camp-Hill_PA_17011_M36204-06535",
+        "description": {
+            "beds": 4,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 2066,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "312 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 325842,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 323300,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 365000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 229900,
+        "permalink": "312-Manchester-Rd_Camp-Hill_PA_17011_M36204-06535",
+        "status": "sold",
+        "listing_id": "617538061",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3604978435",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1303-Kingsley-Rd_Camp-Hill_PA_17011_M36049-78435",
+        "description": {
+            "beds": 3,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 997,
+            "lot_sqft": 5663,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1303 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 241000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 241936,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 229700,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 199500,
+        "permalink": "1303-Kingsley-Rd_Camp-Hill_PA_17011_M36049-78435",
+        "status": "sold",
+        "listing_id": "2941195461",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3689199465",
+        "href": "https://www.realtor.com/realestateandhomes-detail/323-Manchester-Rd_Camp-Hill_PA_17011_M36891-99465",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 2,
+            "baths_half": 1,
+            "baths_consolidated": "1.5",
+            "sqft": 1550,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "323 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 246000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 254200,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 232234,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "323-Manchester-Rd_Camp-Hill_PA_17011_M36891-99465",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3693335985",
+        "href": "https://www.realtor.com/realestateandhomes-detail/319-Manchester-Rd_Camp-Hill_PA_17011_M36933-35985",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1590,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "319 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 256100,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 268235,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 246000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "319-Manchester-Rd_Camp-Hill_PA_17011_M36933-35985",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3647387077",
+        "href": "https://www.realtor.com/realestateandhomes-detail/322-Manchester-Rd_Camp-Hill_PA_17011_M36473-87077",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": 9583,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "322 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 218000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 213544,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 220300,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "322-Manchester-Rd_Camp-Hill_PA_17011_M36473-87077",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3697211643",
+        "href": "https://www.realtor.com/realestateandhomes-detail/317-Manchester-Rd_Camp-Hill_PA_17011_M36972-11643",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1403,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "317 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 278500,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 293000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 276667,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 149900,
+        "permalink": "317-Manchester-Rd_Camp-Hill_PA_17011_M36972-11643",
+        "status": "sold",
+        "listing_id": "2590626043",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3678876799",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1400-Warwick-Rd_Camp-Hill_PA_17011_M36788-76799",
+        "description": {
+            "beds": 3,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 2420,
+            "lot_sqft": 10454,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1400 Warwick Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 289400,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 323439,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 283000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 224400,
+        "permalink": "1400-Warwick-Rd_Camp-Hill_PA_17011_M36788-76799",
+        "status": "sold",
+        "listing_id": "2283586410",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3620332003",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1307-Kingsley-Rd_Camp-Hill_PA_17011_M36203-32003",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 2,
+            "baths_half": 1,
+            "baths_consolidated": "1.5",
+            "sqft": 1452,
+            "lot_sqft": 5663,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1307 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 259300,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 259700,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 231000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 229900,
+        "permalink": "1307-Kingsley-Rd_Camp-Hill_PA_17011_M36203-32003",
+        "status": "sold",
+        "listing_id": "2955214261",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3712080754",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1296-Kingsley-Rd_Camp-Hill_PA_17011_M37120-80754",
+        "description": {
+            "beds": 2,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 808,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1296 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 210000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 187900,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 216907,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "1296-Kingsley-Rd_Camp-Hill_PA_17011_M37120-80754",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3694603027",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1300-Kingsley-Rd_Camp-Hill_PA_17011_M36946-03027",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1508,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1300 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 233700,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 232000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 260995,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 142900,
+        "permalink": "1300-Kingsley-Rd_Camp-Hill_PA_17011_M36946-03027",
+        "status": "sold",
+        "listing_id": "2769860795",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3665051134",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1320-Carlisle-Rd_Camp-Hill_PA_17011_M36650-51134",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 2,
+            "baths_half": 1,
+            "baths_consolidated": "1.5",
+            "sqft": 1799,
+            "lot_sqft": 7405,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1320 Carlisle Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 267686,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 272000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 266400,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 244900,
+        "permalink": "1320-Carlisle-Rd_Camp-Hill_PA_17011_M36650-51134",
+        "status": "sold",
+        "listing_id": "2977858528",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3621077322",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1309-Kingsley-Rd_Camp-Hill_PA_17011_M36210-77322",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": null,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1309 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 234127,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 234700,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 230000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 145000,
+        "permalink": "1309-Kingsley-Rd_Camp-Hill_PA_17011_M36210-77322",
+        "status": "sold",
+        "listing_id": "604406377",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3663001507",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1318-Carlisle-Rd_Camp-Hill_PA_17011_M36630-01507",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1833,
+            "lot_sqft": 7405,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1318 Carlisle Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 249100,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 233000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 262648,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 209950,
+        "permalink": "1318-Carlisle-Rd_Camp-Hill_PA_17011_M36630-01507",
+        "status": "sold",
+        "listing_id": "2968084112",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3675671928",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1402-Warwick-Rd_Camp-Hill_PA_17011_M36756-71928",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": 11326,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1402 Warwick Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 261600,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 272174,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 256000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "1402-Warwick-Rd_Camp-Hill_PA_17011_M36756-71928",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3699596663",
+        "href": "https://www.realtor.com/realestateandhomes-detail/313-Manchester-Rd_Camp-Hill_PA_17011_M36995-96663",
+        "description": {
+            "beds": 4,
+            "baths_full": 2,
+            "baths": 3,
+            "baths_half": 1,
+            "baths_consolidated": "2.5",
+            "sqft": 1791,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "313 Manchester Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 281000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 278100,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 289613,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "313-Manchester-Rd_Camp-Hill_PA_17011_M36995-96663",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3678615937",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1302-Kingsley-Rd_Camp-Hill_PA_17011_M36786-15937",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 2,
+            "baths_half": 1,
+            "baths_consolidated": "1.5",
+            "sqft": 997,
+            "lot_sqft": 6098,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1302 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 270600,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 275208,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 230000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 240000,
+        "permalink": "1302-Kingsley-Rd_Camp-Hill_PA_17011_M36786-15937",
+        "status": "sold",
+        "listing_id": "2956198914",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3640120219",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1316-Carlisle-Rd_Camp-Hill_PA_17011_M36401-20219",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1576,
+            "lot_sqft": 6970,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1316 Carlisle Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 262000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 258300,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 266370,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 229000,
+        "permalink": "1316-Carlisle-Rd_Camp-Hill_PA_17011_M36401-20219",
+        "status": "sold",
+        "listing_id": "2956281102",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3649473970",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1300-Warwick-Rd_Camp-Hill_PA_17011_M36494-73970",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": 6534,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1300 Warwick Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 235680,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 251500,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 227000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 229000,
+        "permalink": "1300-Warwick-Rd_Camp-Hill_PA_17011_M36494-73970",
+        "status": "sold",
+        "listing_id": "2982881316",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3596183672",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1294-Kingsley-Rd_Camp-Hill_PA_17011_M35961-83672",
+        "description": {
+            "beds": 2,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1205,
+            "lot_sqft": 6534,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1294 Kingsley Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 259000,
+                "date": "2025-07-14",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 260162,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 251000,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "1294-Kingsley-Rd_Camp-Hill_PA_17011_M35961-83672",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3676789906",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1313-Warwick-Rd_Camp-Hill_PA_17011_M36767-89906",
+        "description": {
+            "beds": 2,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": null,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1313 Warwick Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 233800,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 229000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 250540,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 138700,
+        "permalink": "1313-Warwick-Rd_Camp-Hill_PA_17011_M36767-89906",
+        "status": "sold",
+        "listing_id": "609173469",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3670752823",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1309-Warwick-Rd_Camp-Hill_PA_17011_M36707-52823",
+        "description": {
+            "beds": 3,
+            "baths_full": 2,
+            "baths": 2,
+            "baths_half": null,
+            "baths_consolidated": "2",
+            "sqft": 1731,
+            "lot_sqft": 6534,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1309 Warwick Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 306699,
+                "date": "2025-08-06",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 317400,
+                "date": "2025-08-11",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 287000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": 279900,
+        "permalink": "1309-Warwick-Rd_Camp-Hill_PA_17011_M36707-52823",
+        "status": "sold",
+        "listing_id": "2971097052",
+        "__typename": "SearchHome"
+    },
+    {
+        "property_id": "3627226203",
+        "href": "https://www.realtor.com/realestateandhomes-detail/1314-Carlisle-Rd_Camp-Hill_PA_17011_M36272-26203",
+        "description": {
+            "beds": 3,
+            "baths_full": 1,
+            "baths": 1,
+            "baths_half": null,
+            "baths_consolidated": "1",
+            "sqft": 1033,
+            "lot_sqft": 6534,
+            "__typename": "SearchHomeDescription"
+        },
+        "location": {
+            "address": {
+                "line": "1314 Carlisle Rd",
+                "city": "Camp Hill",
+                "state_code": "PA",
+                "postal_code": "17011",
+                "__typename": "SearchHomeAddress"
+            },
+            "__typename": "SearchHomeLocation"
+        },
+        "current_estimates": [
+            {
+                "estimate": 250800,
+                "date": "2025-08-11",
+                "isbest_homevalue": true,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 246000,
+                "date": "2025-07-14",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            },
+            {
+                "estimate": 273675,
+                "date": "2025-08-06",
+                "isbest_homevalue": false,
+                "__typename": "LatestEstimate"
+            }
+        ],
+        "list_price": null,
+        "permalink": "1314-Carlisle-Rd_Camp-Hill_PA_17011_M36272-26203",
+        "status": "sold",
+        "listing_id": null,
+        "__typename": "SearchHome"
+    }
+]

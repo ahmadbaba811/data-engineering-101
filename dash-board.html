@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Mission Control Dashboard</title>
+  <style>
+    :root{
+      --bg:#0f1115; --fg:#e6e6e6; --muted:#9aa3b2; --card:#171a21; --accent:#4da3ff; --border:#242836;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    header{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0));position:sticky;top:0;z-index:5}
+    .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .btn{background:var(--card);color:var(--fg);border:1px solid var(--border);padding:8px 12px;border-radius:12px;cursor:pointer}
+    .btn:hover{border-color:var(--accent)}
+    select,.input{background:var(--card);color:var(--fg);border:1px solid var(--border);padding:8px 10px;border-radius:10px}
+    .clock{font-variant-numeric:tabular-nums;font-weight:600}
+    .tag{font-size:12px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;padding:10px;height:calc(100% - 64px)}
+    @media (max-width:1400px){.grid{grid-template-columns:repeat(2, 1fr)}}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .panel{display:flex;flex-direction:column;min-height:200px;border:1px solid var(--border);background:var(--card);border-radius:16px;overflow:hidden}
+    .panel header{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-bottom:1px solid var(--border);background:transparent}
+    .panel-title{font-size:14px;color:#cfd6e4}
+    iframe{border:0;width:100%;height:100%}
+    .notice{padding:8px 10px;color:var(--muted);font-size:13px}
+    .layout{height:100%}
+    .hidden{display:none}
+    .content{padding:10px;display:flex;gap:10px;flex:1}
+    .col{flex:1}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+    .big{font-size:38px;font-weight:700;line-height:1}
+    .sub{color:var(--muted)}
+    .chip{padding:4px 8px;border:1px solid var(--border);border-radius:999px}
+      /* Styled news feed cards */
+    .feed{display:grid;grid-template-columns:1fr;gap:10px;max-height:360px;overflow:auto;padding-right:6px}
+    .feed-card{background:#1b1f2a;border:1px solid var(--border);border-radius:14px;padding:12px 14px;box-shadow:0 6px 16px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,0.02)}
+    .feed-card a{color:var(--fg);text-decoration:none;display:block}
+    .feed-card a:hover{text-decoration:underline}
+    .feed-title{font-size:14px;line-height:1.35}
+    .feed-meta{margin-top:6px;font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
+    .tag-pill{font-size:11px;padding:2px 6px;border:1px solid var(--border);border-radius:999px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="controls">
+      <strong>Dashboard:</strong>
+      <select id="profileSelect" title="Choose time-based profile"></select>
+      <span class="tag" id="activeTimeWindow"></span>
+      <button class="btn" id="prevBtn" title="Previous page">⟨ Prev</button>
+      <button class="btn" id="playPauseBtn" title="Play/Pause rotation">⏸ Pause</button>
+      <button class="btn" id="nextBtn" title="Next page">Next ⟩</button>
+      <button class="btn" id="refreshBtn" title="Refresh all">↻ Refresh</button>
+      <button class="btn" id="fullscreenBtn" title="Toggle fullscreen">⛶ Fullscreen</button>
+    </div>
+    <div class="controls">
+      <span class="clock" id="clock">--:--</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <script>
+  /**
+   * Added widgets:
+   * - Open‑Meteo weather (London) replacing Windy iframe
+   * - RSS news list replacing Drive tile
+   */
+
+  const ROTATE_MS = 60_000; // 60 seconds per page
+  const DEFAULT_PROFILE_BY_TIME = true; // set to false to always start with the first profile
+
+  // Define time windows (24h): used to auto-pick a profile by local time
+  const TIME_WINDOWS = [
+    { key: 'morning', label: 'Morning', start: '06:00', end: '09:59' },
+    { key: 'work', label: 'Workday', start: '10:00', end: '18:59' },
+    { key: 'evening', label: 'Evening', start: '19:00', end: '23:59' },
+    { key: 'overnight', label: 'Overnight', start: '00:00', end: '05:59' }
+  ];
+
+  // Simple WMO → icon mapping
+  const WMO = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌧️',61:'🌧️',63:'🌧️',65:'🌧️',71:'🌨️',80:'🌦️',81:'🌧️',82:'⛈️'};
+
+  // ---- Utility helpers ----
+  const $ = (sel) => document.querySelector(sel);
+  function hhmmToMinutes(hhmm){ const [h,m]=hhmm.split(':').map(Number); return h*60+m; }
+  function inWindow(mins, start, end){
+    if (start <= end) return mins >= start && mins <= end;
+    return mins >= start || mins <= end;
+  }
+  function currentWindow(){
+    const d = new Date();
+    const mins = d.getHours()*60 + d.getMinutes();
+    for (const w of TIME_WINDOWS){
+      const s = hhmmToMinutes(w.start), e = hhmmToMinutes(w.end);
+      if (inWindow(mins, s, e)) return w;
+    }
+    return TIME_WINDOWS[0];
+  }
+
+  function hostFromUrl(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } }
+
+  // ---- Widgets (no iframes) ----
+  async function fetchWeather(){
+    const lat = 51.5074, lon = -0.1278; // London
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=${encodeURIComponent(tz)}`;
+    const res = await fetch(url);
+    if(!res.ok) throw new Error('Weather fetch failed');
+    return res.json();
+  }
+  function renderWeather(panel, data){
+    const c = data.current; const d = data.daily;
+    const wrap = document.createElement('div');
+    wrap.className = 'content';
+    wrap.innerHTML = `
+      <div class="col">
+        <div class="big">${Math.round(c.temperature_2m)}°C ${WMO[c.weather_code]||'🌡️'}</div>
+        <div class="sub">Feels ${Math.round(c.apparent_temperature)}° • Wind ${Math.round(c.wind_speed_10m)} m/s • RH ${c.relative_humidity_2m}%</div>
+        <div class="chip" style="margin-top:8px">London</div>
+      </div>
+      <div class="col">
+        <ul class="list">
+          ${d.time.slice(0,5).map((t,i)=>{
+            const max = Math.round(d.temperature_2m_max[i]);
+            const min = Math.round(d.temperature_2m_min[i]);
+            const pop = d.precipitation_probability_max?.[i] ?? '-';
+            const ico = WMO[d.weather_code[i]] || '🌡️';
+            const day = new Date(t).toLocaleDateString('en-GB',{weekday:'short'});
+            return `<li>${day}: ${ico} Max ${max}° / Min ${min}° • POP ${pop}%</li>`;
+          }).join('')}
+        </ul>
+      </div>`;
+    panel.appendChild(wrap);
+  }
+
+  async function fetchRSS(url){
+    // Try multiple CORS-friendly proxies (some feeds block certain proxies)
+    const proxies = [
+      (u)=>`https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+      (u)=>`https://r.jina.ai/${u}`,
+      (u)=>`https://cors.isomorphic-git.org/${u}`
+    ];
+    let xml = null;
+    for (const make of proxies){
+      try{
+        const prox = make(url);
+        const res = await fetch(prox, { cache: 'no-store' });
+        if(!res.ok) continue;
+        const text = await res.text();
+        if (text && text.length > 0) { xml = text; break; }
+      }catch(e){ /* try next */ }
+    }
+    if (!xml) throw new Error('RSS fetch failed (all proxies)');
+
+    const doc = new DOMParser().parseFromString(xml,'application/xml');
+
+    // Support both RSS (<item>) and Atom (<entry>)
+    let nodes = [...doc.querySelectorAll('item')];
+    if (!nodes.length) nodes = [...doc.querySelectorAll('entry')];
+
+    const items = nodes.slice(0, 10).map((it)=>{
+      let title = it.querySelector('title')?.textContent || 'Untitled';
+      let link = it.querySelector('link')?.textContent || '#';
+      // Atom links use <link href="...">
+      const atomHref = it.querySelector('link[href]')?.getAttribute('href');
+      if (atomHref) link = atomHref;
+      return { title, link };
+    });
+    return items;
+  }
+  function renderNews(panel, title, items){
+    const wrap = document.createElement('div');
+    wrap.className = 'content';
+    const col = document.createElement('div');
+    col.className = 'col';
+    const grid = document.createElement('div');
+    grid.className = 'feed';
+
+    items.forEach(i=>{
+      const card = document.createElement('div');
+      card.className = 'feed-card';
+
+      const a = document.createElement('a');
+      a.href = i.link || '#';
+      a.target = '_blank';
+      a.rel = 'noopener';
+
+      const t = document.createElement('div');
+      t.className = 'feed-title';
+      t.textContent = i.title || 'Untitled';
+
+      const meta = document.createElement('div');
+      meta.className = 'feed-meta';
+      const host = hostFromUrl(i.link || '');
+      if (host){
+        const pill = document.createElement('span');
+        pill.className = 'tag-pill';
+        pill.textContent = host;
+        meta.appendChild(pill);
+      }
+      const open = document.createElement('span');
+      open.textContent = 'Open ↗';
+      meta.appendChild(open);
+
+      a.appendChild(t);
+      a.appendChild(meta);
+      card.appendChild(a);
+      grid.appendChild(card);
+    });
+
+    col.appendChild(grid);
+    wrap.appendChild(col);
+    panel.appendChild(wrap);
+  }
+
+  // ---- Panel factory that supports either iframe or custom renderer ----
+  function makePanel(conf){
+    const { title, url, render } = conf;
+    const panel = document.createElement('div');
+    panel.className = 'panel';
+
+    const head = document.createElement('header');
+    const htitle = document.createElement('div');
+    htitle.className = 'panel-title';
+    htitle.textContent = title || 'Untitled';
+    head.appendChild(htitle);
+
+    if(url){
+      const openBtn = document.createElement('button');
+      openBtn.textContent = '🔗 Open';
+      openBtn.className = 'btn';
+      openBtn.style.padding = '4px 8px';
+      openBtn.onclick = () => window.open(url, '_blank');
+      head.appendChild(openBtn);
+    }
+
+    panel.appendChild(head);
+
+    if (typeof render === 'function'){
+      // Custom widget
+      try { render(panel); } catch(e){
+        const note = document.createElement('div'); note.className='notice'; note.textContent='Widget failed to load.'; panel.appendChild(note);
+      }
+    } else if (url){
+      // Fallback: iframe
+      const frame = document.createElement('iframe');
+      frame.loading = 'lazy';
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      frame.src = url;
+      frame.addEventListener('error', () => {
+        const note = document.createElement('div');
+        note.className = 'notice';
+        note.textContent = 'This site may block embedding. Use the 🔗 Open button.';
+        panel.appendChild(note);
+      });
+      panel.appendChild(frame);
+    } else {
+      const note = document.createElement('div'); note.className='notice'; note.textContent='No content configured.'; panel.appendChild(note);
+    }
+
+    return panel;
+  }
+
+  // ---- Your dashboards (with replacements) ----
+  const dashboards = {
+    morning: {
+      label: 'Morning – Weather • Calendar',
+      pages: [
+        [
+          // Replaced Windy with Open‑Meteo widget
+          { title: 'Weather — London', render: async (panel)=>{
+              try { const data = await fetchWeather(); renderWeather(panel, data); }
+              catch(e){ panel.innerHTML += '<div class="notice">Weather failed to load.</div>'; }
+            }
+          },
+          // Keep your calendar embed as-is
+          { title: 'Calendar (Google, month view)', url: 'https://calendar.google.com/calendar/embed?src=shuraim811%40gmail.com&ctz=Africa%2FLagos' }
+        ]
+      ]
+    },
+    work: {
+      label: 'Work – Calendar • News',
+      pages: [
+        [
+          { title: 'Calendar', url: 'https://calendar.google.com/calendar/embed?src=shuraim811%40gmail.com&ctz=Africa%2FLagos' },
+          // Replaced Drive with RSS news widget (BBC by default)
+          { title: 'Headlines — BBC', render: async (panel)=>{
+              try { const items = await fetchRSS('https://feeds.bbci.co.uk/news/rss.xml'); renderNews(panel, 'BBC News', items); }
+              catch(e){ panel.innerHTML += '<div class="notice">News failed to load.</div>'; }
+            }
+          },
+          { title: 'Nairaland — Latest', render: async (panel)=>{
+              try { const items = await fetchRSS('https://www.nairaland.com/feed'); renderNews(panel, 'Nairaland', items); }
+              catch(e){ panel.innerHTML += '<div class="notice">Nairaland feed failed to load.</div>'; }
+            }
+          }
+        ]
+      ]
+    },
+    evening: {
+      label: 'Evening – YouTube • Spotify',
+      pages: [
+        [
+          { title: 'YouTube', url: 'https://www.youtube.com/feed/subscriptions' },
+          { title: 'Spotify Web', url: 'https://open.spotify.com' }
+        ]
+      ]
+    },
+    overnight: {
+      label: 'Overnight – Minimal Clock',
+      pages: [
+        [ { title: 'Minimal Clock', url: 'https://vclock.com/fullscreen-digital-clock/' } ]
+      ]
+    }
+  };
+
+  // ---- Build profile selector ----
+  const profileSelect = $('#profileSelect');
+  Object.entries(dashboards).forEach(([key,conf]) => {
+    const opt = document.createElement('option');
+    opt.value = key; opt.textContent = conf.label || key; profileSelect.appendChild(opt);
+  });
+
+  // Pick initial profile
+  let activeProfileKey = DEFAULT_PROFILE_BY_TIME ? currentWindow().key : Object.keys(dashboards)[0];
+  if (!dashboards[activeProfileKey]) activeProfileKey = Object.keys(dashboards)[0];
+  profileSelect.value = activeProfileKey;
+
+  // Show active time window label
+  function updateTimeWindowLabel(){
+    const w = currentWindow();
+    const el = $('#activeTimeWindow');
+    el.textContent = `(${w.label}: ${w.start}–${w.end})`;
+  }
+  updateTimeWindowLabel();
+  setInterval(updateTimeWindowLabel, 30_000);
+
+  // Rotation state
+  let pageIndex = 0;
+  let playing = true;
+  let rotateTimer = null;
+
+  function clearGrid(){ $('#grid').innerHTML = ''; }
+
+  function render(){
+    const grid = $('#grid');
+    clearGrid();
+    const profile = dashboards[activeProfileKey];
+    const pages = profile.pages;
+    if (!pages || !pages.length) return;
+    if (pageIndex >= pages.length) pageIndex = 0;
+    const page = pages[pageIndex];
+    page.forEach(conf => grid.appendChild(makePanel(conf)));
+    document.title = `${profile.label} — Page ${pageIndex+1}/${pages.length}`;
+  }
+
+  function startRotation(){
+    stopRotation();
+    rotateTimer = setInterval(() => {
+      pageIndex = (pageIndex + 1) % dashboards[activeProfileKey].pages.length;
+      render();
+    }, ROTATE_MS);
+  }
+  function stopRotation(){ if (rotateTimer) { clearInterval(rotateTimer); rotateTimer = null; } }
+
+  // Controls
+  $('#prevBtn').onclick = () => { pageIndex = (pageIndex - 1 + dashboards[activeProfileKey].pages.length) % dashboards[activeProfileKey].pages.length; render(); };
+  $('#nextBtn').onclick = () => { pageIndex = (pageIndex + 1) % dashboards[activeProfileKey].pages.length; render(); };
+  $('#playPauseBtn').onclick = () => { playing = !playing; if (playing) { startRotation(); } else { stopRotation(); } $('#playPauseBtn').textContent = playing ? '⏸ Pause' : '▶ Play'; };
+  $('#refreshBtn').onclick = () => { render(); };
+  $('#fullscreenBtn').onclick = () => { if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); } else { document.exitFullscreen(); } };
+
+  profileSelect.onchange = (e) => {
+    activeProfileKey = e.target.value;
+    pageIndex = 0;
+    render();
+    if (playing) { startRotation(); }
+  };
+
+  // Live clock
+  function tickClock(){
+    const d = new Date();
+    const pad = (n)=> String(n).padStart(2,'0');
+    $('#clock').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  }
+  setInterval(tickClock, 500); tickClock();
+
+  // Auto-switch profile when time window changes (every minute)
+  setInterval(() => {
+    const w = currentWindow();
+    if (DEFAULT_PROFILE_BY_TIME && w.key !== activeProfileKey) {
+      activeProfileKey = w.key;
+      profileSelect.value = activeProfileKey;
+      pageIndex = 0;
+      render();
+      if (playing) startRotation();
+    }
+  }, 60_000);
+
+  // Initial render
+  render();
+  startRotation();
+  </script>
+</body>
+</html>
